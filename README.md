@@ -34,7 +34,7 @@ python manage.py runserver
 ## Instructions for common oprations
 You can access the movies list by going to: http://localhost:8000/api/movies. This same URL allows you to add new entries to the database. You can filter movies by year by clicking on the filters button at the top right.
 
-To access comments, go to the following link: http://localhost:8000/api/comments. You can add new comments on the same link. In order to filter comments by movie, append the movie id to the comments URL (i.e. http://localhost:8000/api/comments/1)
+To access comments, go to the following link: http://localhost:8000/api/comments. You can add new comments on the same link. In order to filter comments by movie, append the movie id to the comments URL (i.e. http://localhost:8000/api/comments/1) or use the filter button directly in the top right corner.
 
 ## Unit tests
 `test.py` in movies/ folder contains all unit tests. 

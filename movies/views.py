@@ -64,6 +64,12 @@ class ListCreateComment(ListCreateAPIView):
     """
     API endpoint that allows comments to be listed or created
     """
+
+    # Comment fields used to filter results
+    filter_fields = (
+        'movie',
+    )
+
     serializer_class = CommentSerializer
 
     def get_queryset(self):
