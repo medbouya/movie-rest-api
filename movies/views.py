@@ -6,16 +6,14 @@ from rest_framework.generics import ListCreateAPIView, ListAPIView, RetrieveUpda
 from .models import Movie, Comment
 from .serializers import MovieSerializer, CommentSerializer
 
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 
 API = 'https://www.omdbapi.com/?i=tt3896198&apikey=6a51d27&t='
 
-# Redirects to the movies list when landing on a 404 page
 
+def home(request):
 
-def view_404(request, exception=None):
-    # do something
-    return redirect('movies')
+    return render(request, 'home.html')
 
 
 class ListCreateMovie(ListCreateAPIView):
@@ -69,9 +67,6 @@ class ListCreateComment(ListCreateAPIView):
     serializer_class = CommentSerializer
 
     def get_queryset(self):
-        serializer_context = {
-            'request': self.request,
-        }
         return Comment.objects.all()
 
     def perform_create(self, serializer):

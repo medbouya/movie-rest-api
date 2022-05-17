@@ -14,13 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import include, path
+from movies.views import home
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 
 urlpatterns = [
+    path('', home, name='home'),
     path('api/', include('movies.urls')),
 ]
-
-# Overriding Django default behavior for page not found
-handler404 = 'movies.views.view_404'
