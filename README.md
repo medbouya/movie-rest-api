@@ -21,13 +21,23 @@ git clone https://github.com/medbouya/movie-rest-api.git
 Install the Django dependencies .
 ```sh
 cd movie-rest-api
+```
+```sh
 pip install -r requirements.txt
+```
+or
+```sh
+pip3 install -r requirements.txt
 ```
 
 Run the app...
 
 ```sh
 python manage.py runserver
+```
+or
+```sh
+python3 manage.py runserver
 ```
 ...and visit http://localhost:8000 
 
